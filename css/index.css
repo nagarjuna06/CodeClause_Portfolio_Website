@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding-bottom: 100px;
+}
+.nav-bar{
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+footer{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position:fixed;
+    bottom: 0;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+nav p{
+    margin:0px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.name-container{
+    height: 400px;
+    background-image: url('../assets/background-2.jpg');
+    background-size: 100%;
+    background-position: bottom right;
+}
+.content{
+    font-family: 'Source Serif Pro';
+}
+.home{
+    font-size: 20px;
+    padding: 30px 20px;
+    line-height: 30px;
+}
+.home h3{
+    margin: 16px 0px;
+}
+.home ul{
+    padding:0px 40px;
+    list-style: '💠';
+    list-style-position:outside;
+}
+.home ul li{
+    margin: 16px 0px;
+}
+.name-container div{
+    padding-top:150px ;
+    padding-left: 100px;
+}
+.name-container div h1{
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 74px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: trans-up 500ms linear forwards;
+    animation-delay: 500ms;
+}
+@keyframes trans-up {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.name-container div p{
+    font-size: 36px;
+    line-height: 49px;
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: trans-down 500ms forwards;
+    animation-delay: 1300ms;
+}
+@keyframes trans-down {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.heading{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+    position: sticky;
+    top:0px;
+    font-family: 'Nunito Sans',sans-serif;
+}
+.projects{
+    display: none;
+}
+.project-item{
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.project-item p{
+    margin: 16px 0px;
+}
+a{
+    color: darkblue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.articles{
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+.article-content{
+    line-height: 40px;
+    padding: 0px 20px;
+}
+.article-content ol{
+    padding: 0px 20px;
+}
+.contact{
+    display: none;
+}
+.contact-details{
+    font-size: 20px;
+    font-family: 'Nunito Sans',sans-serif;
+    line-height: 30px;
+    padding-top: 20px;
+    margin-left: 40%;
+}
+.bi-arrow-up{
+    background-color: black;
+    padding: 8px 10px;
+    border-radius: 50%;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    font-size: 20px;
+    right: 20px;
+    scale: 0;
+    opacity: 0;
+}
+.fade-out{
+    animation: fadeOut 300ms forwards;
+}
+.fade-in{
+    animation: fadeIn 300ms forwards;
+}
+@keyframes fadeOut {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 0;
+    }
+}
+@keyframes fadeIn {
+    0%{
+       scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@media (max-width:600px) {
+    .nav-bar{
+        background-color:transparent;
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+    nav p{
+        margin:0px 10px;
+    }
+    .name-container{
+        height: 240px;
+        position: sticky;
+        top: 0;
+    }
+    .name-container div{
+        padding-left: 30px;
+        padding-top: 60px;
+    }
+    .name-container div h1{
+        font-size: 30px;
+        line-height: 20px;
+    }
+    .name-container div p{
+        font-size: 18px;
+    }
+    .content{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .heading{
+        font-size: 14px;
+        padding: 10px;
+        top: 240px;
+    }
+    .home{
+        padding: 30px 10px;
+    }
+    .contact-details{
+        margin-left: 14%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .project-item{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .project-item p{
+        margin: 10px 0px;
+    }
+    .article-content{
+        line-height: 30px;
+        padding: 0px 20px;
+    }
+}
